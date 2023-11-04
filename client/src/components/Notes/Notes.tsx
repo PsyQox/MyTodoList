@@ -4,10 +4,8 @@ import Note from "./Note/Note"
 const Notes = ()=>{
 
     return(
-        <div>
-            <h1>Soy notes</h1>
+        <div className="flex flex-wrap justify-center items-center">
             <Note />
-
         </div>
     )
 }
