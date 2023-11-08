@@ -1,10 +1,8 @@
-import {Note} from '../types';
+import {reducerState} from '../types';
 import { ADD_NOTES } from './actionsTypes';
 import { Reducer } from 'redux';
 
-interface reducerState {
-    notes: Array<Note>
-}
+
 
 const INITIAL_STATE: reducerState = {
     notes: [{
@@ -14,7 +12,7 @@ const INITIAL_STATE: reducerState = {
         priority: 1
     },
     {
-        title:"titulo",
+        title:"titulo2",
         description: "asd",
         date: "28-10-2023",
         priority: 1
