@@ -23,7 +23,7 @@ const rootReducer:Reducer<reducerState, any> = (state:reducerState = INITIAL_STA
     switch (action.type) {
         case ADD_NOTES:
             return{
-                ...state
+                ...state, notes: [...state.notes, action.payload]
             }
         default:
             return{

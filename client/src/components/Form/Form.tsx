@@ -1,21 +1,31 @@
 import { useState } from "react"
+import { useDispatch} from "react-redux"
+import { addNotes } from "../../redux/actions"
+import { NoteT } from "../../types"
 
 const Form = () =>{
-    const initialFormState = {
+    const dispatch = useDispatch()
+
+    const initialFormState:NoteT = {
         title: '',
         description: '',
         date: '',
         priority: 0
     }
 
-    const [form, setForm] = useState(initialFormState)
+    const [form, setForm] = useState<NoteT>(initialFormState)
 
     const onHandleSubmit = (event:React.FormEvent<HTMLFormElement>)=>{
         event.preventDefault()
+        dispatch(addNotes(form))
     }
 
     const onHandleChange = (event:React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>)=>{
         setForm({...form, [event.target.name]:event.target.value})
+    }
+
+    const validate = (data:any) => {
+        
     }
 
     return(

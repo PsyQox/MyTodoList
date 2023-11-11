@@ -1,7 +1,9 @@
 import { ADD_NOTES } from './actionsTypes'
+import { NoteT } from '../types'
 
-export const getNotes =()=>{
+export const addNotes =(note:NoteT)=>{
     return{
-        type: ADD_NOTES
+        type: ADD_NOTES,
+        payload: note
     }
 }
