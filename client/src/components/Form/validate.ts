@@ -2,7 +2,7 @@ import { NoteT } from "../../types"
 
 export const validate = (data:NoteT) => {
     let incorrect:any = {}
-    
+     
     if (data.title) {
         let title = data.title.trim()
         if (!title) {
