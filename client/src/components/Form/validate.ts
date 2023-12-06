@@ -10,7 +10,7 @@ export const validate = (data:NoteT) => {
         } else if (title.length > 30) {
             incorrect.title = "The title should be less than 30 characters"        
         }    
-    }
+    } 
 
     if(data.date){
         let date = data.date.trim()
