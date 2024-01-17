@@ -23,7 +23,7 @@ export const validate = (data:NoteT) => {
         if (data.priority < 0) {
             incorrect.priority = "The priority can not be less than 0"
         }else if(data.priority > 10){
-            incorrect.priority = "The priority can not be more than 10"
+            incorrect.priority = "The priority can not be more than 10" 
         }
     }
 
